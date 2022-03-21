@@ -330,11 +330,52 @@ footer nav ul li a{
     padding-bottom: 2rem;
 }
 
+/*producto unico (elemento)*/
+
+#mainElemento{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-areas: "titulo titulo"
+                         "imagen descripcion"
+                         "chart chart";
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 15px
+}
+
+#tituloElemento{
+    grid-area: titulo;
+    font-size: 2rem;
+    padding-left: 2rem;
+
+}
+
+#imgElemento{
+    display: flex;
+    justify-content: center;
+    grid-area: imagen;
+    align-items: center;
+    padding-left: 5rem;
+    width: 80%;
+}
+
+#descripcionElemento{
+    grid-area: descripcion;
+}
+#descripcionElemento h2{
+    font-size: 2rem;
+}
+
+#descripcionElemento p{
+    font-size: 1.2rem;
+}
 
 
-
-/*producto unico*/
-
+#chartElemento{
+    grid-area: chart;
+    font-size: 1.2rem;
+    padding-left: 5rem;
+}
 
 
 @media (max-width: 768px){
@@ -368,7 +409,7 @@ footer nav ul li a{
     main{  
         text-align: center;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr;
         grid-template-areas: "logo"
                              "gif"
                              "carrusel" ;
@@ -387,7 +428,7 @@ footer nav ul li a{
 
   /*Cotizaciones responsive*/
   #mainCotizaciones{
-    grid-template-rows: 1fr 4fr 4fr;
+    grid-template-rows: 0.5fr 4fr 4fr;
     grid-template-areas: "titulo"
                          "cotizaciones"
                          "archivo";
@@ -399,6 +440,13 @@ footer nav ul li a{
 
 #mainCotizaciones .submit{
     width: 100%;
+}
+
+#formularioCotizaciones{
+    padding: 1rem;
+}
+#archivo3d{
+    padding: 1rem;
 }
 
 /*productos responsive*/
@@ -422,6 +470,8 @@ footer nav ul li a{
     padding: 0;
 }
 
+/*contacto responsive*/
+
 #mainContacto{
     grid-template-columns: 1fr;
     grid-template-rows: 0.25fr 1fr 1fr;
@@ -430,7 +480,25 @@ footer nav ul li a{
                          "mapa";
     padding: 0;
 }
+ /*elemento responsive*/
 
+#mainElemento{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr;
+    grid-template-areas: "titulo"
+                         "imagen"
+                         "descripcion"
+                         "chart";
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: justify;
+}
 
+#imgElemento{
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 80%;
+}
 
 }
