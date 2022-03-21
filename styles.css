@@ -1,55 +1,41 @@
 body{
-    background-color:#ABB2B9;
+    background: rgb(34,193,195);
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(0,80,80,1) 100%);
     font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: white;
 }
-
+/*navbar y header*/
 header {
-    width: auto;
-    display: inline-block;
+    width: 96%;
+    display: inline-flex;
     top: 0;
     right: 0;
     margin-right: 2rem;
     margin-left: 2rem;
     position: sticky;
+    grid-area: header;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+
 }
 
 header nav{  
     width: auto;
     height: auto;
-    padding-bottom: 0.5rem;
-    padding-right: 0.5rem;
-    background-color: teal;
+    background-color: transparent;
     text-align: left;
-
-}
-
-#logo{
-    width: 5%;
-    margin-top: 0.1rem;
-    margin-left: 0.1rem;
-}
-
-#mainLogo{
-    width: 40%;
-    height: auto;
-    padding: 2rem;
-    margin: 2rem;
-}
-
-#printerGif{
-    width: 40%;
-    height: auto;
-    padding: 2rem;
-    top:auto;
 }
 
 header nav ul li {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
     padding: 0.2rem;
     margin: 0.2rem;
-    background-color: rgb(0, 197, 197);
-    font-weight: 800;
+    font-weight: 600;
     font-size: 0.8rem;
 }
 
@@ -57,93 +43,394 @@ header nav ul li a {
     text-decoration: none;
     text-transform: uppercase;
     list-style: none;
+    color: white;
 }
+
+/*main del index*/
+
+#mainLogo{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+#printerGif{
+    width: 60%;
+    height: auto;
+    padding: 2rem;
+    top:auto;
+}
+
 
 main{
-    margin: 2rem;
-    padding: 2rem;
-    background-color: teal;
-    width: auto;
-    box-sizing: content-box;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr 2fr 3fr;
+    grid-template-areas: "title title . ."
+                         "logo logo gif gif"
+                         "logo logo carrusel carrusel" ;
 }
 
-footer{
-    width: auto;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    background-color: teal;
-    padding: 1rem;
-    font-size: 1rem;
+#title{
+    grid-area: title;
     text-align: center;
-    font-weight: 800;
+    color: white;
 }
 
-footer nav ul li{
-    text-decoration: none;
-    list-style: none;
-    display: inline-block;
-    padding: 0.5rem;
-    margin: 0.2rem;
-    background-color: rgb(0, 197, 197);;
-    text-transform: uppercase;
+#logo{
+    grid-area: logo;
+    width: 80%;
 }
 
-main #productos figure{
-    display: inline-block;
+#gif{
+    grid-area: gif;
 }
 
-main #ofertas figure{
-    display: inline-block;
-}
-
-main #insumos figure{
-    display: inline-block;
-}
-
-main #productos figure figcaption{
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-main #ofertas figure figcaption{
-    text-align: center;
-}
-
-
-main #insumos figure figcaption{
-    text-align: center;
-}
-
-#carrusel {
-    display: inline-block;
-    width: fit-content;
+#carrusel{
+    grid-area: carrusel;
 }
 
 .carrusel{
     width: 20%;
     margin: 2rem;
+    display: inline-flex;
+    width: 80%;
+    height: auto;
 }
 
-#formaContacto div{
-    display: block; 
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+/*inicio footer*/
+
+footer{
+    width: 100%;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+    background-color: transparent;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 800;
+    grid-area: footer;
+    position: block;
+    bottom: 0;
+}
+footer nav ul{
+    padding: 0;
+}
+
+footer nav ul li{
+    text-decoration: none;
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+    margin: 0.2rem;
+    text-transform: uppercase;
+}
+footer nav ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+/*inicio distintas páginas*/
+/*productos*/
+
+#mainProductos{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0.5fr 2fr 2fr 2fr;
+    grid-template-areas: "titulo titulo titulo titulo titulo"
+                         "productos productos productos productos productos"
+                         "ofertas ofertas ofertas ofertas ofertas"
+                         "insumos insumos insumos insumos insumos";
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#tituloProductos{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+}
+
+#productos{
+    grid-area: productos;
+    font-size: 1.3rem;
+}
+#listaProductos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    font-size: 1.2rem;
+}
+
+#ofertas{
+    grid-area: ofertas;
+    font-size: 1.3rem;
+
+}
+#listaOfertas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    font-size: 1.2rem;
+}
+
+#insumos{
+    grid-area: insumos;
+    font-size: 1.3rem;
+}
+#listaInsumos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    font-size: 1.2rem;
+}
+
+
+/*Contacto*/
+
+#mainContacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr 4fr;
+    grid-template-areas: "titulo titulo"
+                         "contacto mapa"
+                         "contacto mapa";
+    
+    padding-left: 2rem;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 25px;
+}
+
+#formaContacto{
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     font-size: 1.2rem;
     font-weight: 600;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+#mapaContacto{
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#tituloContacto{
+    grid-area: titulo;
+}
+
+#mapaContacto{
+    grid-area: mapa;
+}
+
+
+
+/*Sobre nosotros*/
+
+#mainSobreNosotros{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-areas: "titulo"
+                         "subtitulo"
+                         "articulo";
+    padding-left: 2rem;
+    padding-right: 2rem;
+
 }
 
 #sobreNosotrosTitulo{
-    font-size: 2.2rem;
-    font-weight: 800;
+    grid-area: titulo;
+    font-size: 2rem;
 }
 
 #sobreNosotrosSubtitulo{
+    grid-area: subtitulo;
     font-size: 1.2rem;
-    font-weight: 600;
 }
 
-#sobreNosotros article{
-    font-size: 1.8rem;
-    font-weight: 500;
+#articulo{
+    display: flex;
+    flex-direction: column;
+    grid-area: articulo;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    padding: 2rem;
+    font-size: 1.1rem;
+}
+
+#imgArticulo{
+    width: 50%;
+    height: auto;
+}
+
+/*cotizaciones*/
+
+#mainCotizaciones{
+    grid-template-areas: "titulo titulo titulo titulo"
+                         "cotizaciones cotizaciones archivo archivo"
+                         "cotizaciones cotizaciones archivo archivo";
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+#tituloCotizaciones{
+    grid-area: titulo;
+    padding: 5px;
+}
+
+#formularioCotizaciones{
+    grid-area: cotizaciones;
+    font-size: 1.2rem;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+#formularioCotizaciones form{
+    justify-content: space-between;
+}
+
+#archivo3d{
+    grid-area: archivo;
+    font-size: 1.2rem;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+
+
+/*producto unico*/
+
+
+
+@media (max-width: 768px){
+
+    /*nav y footer comunes, responsive*/
+    header{
+        border: none;
+        width: auto;
+    }
+
+    header nav ul li {
+        display: inline-flex;
+        justify-content: center;
+        padding: 0.1rem;
+        margin: 0.1rem;
+        font-weight: 800;
+        font-size: 0.6rem;
+    }
+
+    footer{
+        justify-content: center;
+        padding: 0.2rem;
+        font-size: 0.6rem;
+        text-align: center;
+        font-weight: 800;
+        grid-area: footer;
+    }
+    
+
+    /*main index responsive*/
+    main{  
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "logo"
+                             "gif"
+                             "carrusel" ;
+        gap: 5px;
+  }
+
+
+
+  .carrusel{
+      width: 60€;
+  }
+
+  #title{
+      display: none;
+  }
+
+  /*Cotizaciones responsive*/
+  #mainCotizaciones{
+    grid-template-rows: 1fr 4fr 4fr;
+    grid-template-areas: "titulo"
+                         "cotizaciones"
+                         "archivo";
+    padding-left: 2rem;
+    padding-right: 2rem;
     text-align: justify;
+    gap: 10px;
+}
+
+#mainCotizaciones .submit{
+    width: 100%;
+}
+
+/*productos responsive*/
+
+
+
+#listaProductos{
+    flex-direction: column;
+    padding: 0;
+}
+
+
+#listaOfertas{
+    flex-direction: column;
+    padding: 0;
+}
+
+
+#listaInsumos{
+    flex-direction: column;
+    padding: 0;
+}
+
+#mainContacto{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 1fr 1fr;
+    grid-template-areas: "titulo"
+                         "contacto"
+                         "mapa";
+    padding: 0;
+}
+
+
+
 }

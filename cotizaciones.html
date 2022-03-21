@@ -11,7 +11,6 @@
 
 		<nav>
 			  <ul>
-				<a href="index.html"><img src="img/logo_transparent_background.png" id="logo" alt="logo"></a>
 				<li><a href="index.html">Inicio</a></li>
 				<li><a href="cotizaciones.html">Cotizaciones</a></li>
 				<li><a href="productos.html">Productos</a></li>
@@ -21,11 +20,13 @@
 		</nav>
 	</header>
 	
-<main>
-	
+<main id="mainCotizaciones">
+	<div id="tituloCotizaciones">
 	<h1>Cotizaciones.</h1>
-	<h2>Por cotizaciones, rellena el formulario aquí abajo:</h2>
+	</div>
 
+	<div id="formularioCotizaciones">
+	<h2>Por cotizaciones, rellena el formulario aquí abajo:</h2>
 	<form action="#">
 
  		<label for="impresiones"><input type="checkbox" id="impresiones">Impresiones</label>
@@ -39,37 +40,36 @@
 		<input type="email" id="email" placeholder="Ingresa tu Email" required>
 		<br>
 		<br>
-		<input type="submit" name="submit">
-
-
+		<input class="submit" type="submit" name="submit">
 	</form>
+	</div>
 
 
+	<div id="archivo3d">
 	<h2>En caso de tener un archivo 3d disponible, envielo a continuación:</h2>
 
-	<section id= "archivo3d">
 	<form action="#">
 		<br>
 		<input type="file">
 		<br>
 		<h3>Si lo conoce, especifique el tipo de archivo:</h3>
 		<br>
-		<label for="stl"><input type="radio" id="stl">Stl</label>
+		<label for="stl"><input type="radio" id="stl" name="radio">Stl</label>
 		<br>
-		<label for="obj"><input type="radio" id="obj">Obj</label>
+		<label for="obj"><input type="radio" id="obj" name="radio">Obj</label>
 		<br>
-		<label for="x3d"><input type="radio" id="x3d">X3D</label>
+		<label for="x3d"><input type="radio" id="x3d" name="radio">X3D</label>
 		<br>
-		<label for="3mf"><input type="radio" id="3mf">3MF</label>
+		<label for="3mf"><input type="radio" id="3mf" name="radio">3MF</label>
 		<br>
 		<br>
 		<label for="email">Email: </label>
 		<input type="email" id="email" placeholder="Ingresa tu Email" required>
 		<br>
 		<br>
-		<input type="submit" name="submit" id="submit">
+		<input type="submit" name="submit" class="submit">
 	</form>
-	</section>
+	</div>
 </main>
 
 	<footer>
