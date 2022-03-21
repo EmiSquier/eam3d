@@ -8,7 +8,7 @@ body{
 }
 /*navbar y header*/
 header {
-    width: 96.5%;
+    width: 96vw;
     display: inline-flex;
     top: 0;
     right: 0;
@@ -480,6 +480,18 @@ footer nav ul li a{
                          "contacto"
                          "mapa";
     padding: 0;
+}
+
+#formaContacto{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 1rem;
+}
+
+#mapaContacto{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 1rem;
 }
  /*elemento responsive*/
 
