@@ -8,7 +8,7 @@ body{
 }
 /*navbar y header*/
 header {
-    width: 96%;
+    width: 96.5%;
     display: inline-flex;
     top: 0;
     right: 0;
@@ -230,6 +230,7 @@ footer nav ul li a{
     border-color: white;
     padding-bottom: 1rem;
     padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 #mapaContacto{
@@ -238,7 +239,7 @@ footer nav ul li a{
     border-color: white;
     padding-bottom: 1rem;
     padding-left: 2rem;
-    padding-right: 2rem;
+    margin-right: 2rem;
 }
 
 #tituloContacto{
