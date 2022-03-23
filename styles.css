@@ -7,19 +7,11 @@ body{
     color: white;
 }
 /*navbar y header*/
-header {
-    width: 96vw;
+header {   
     display: inline-flex;
-    top: 0;
-    right: 0;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    position: sticky;
+    justify-content: center;
+    text-align: center;
     grid-area: header;
-    border: solid;
-    border-width: 2px;
-    border-color: white;
-
 }
 
 header nav{  
@@ -58,8 +50,6 @@ header nav ul li a {
 #printerGif{
     width: 60%;
     height: auto;
-    padding: 2rem;
-    top:auto;
 }
 
 
@@ -71,6 +61,7 @@ main{
     grid-template-areas: "title title . ."
                          "logo logo gif gif"
                          "logo logo carrusel carrusel" ;
+    align-items: center;
 }
 
 #title{
@@ -102,9 +93,6 @@ main{
 /*inicio footer*/
 
 footer{
-    width: 100%;
-    margin-right: 0.2rem;
-    margin-left: 0.2rem;
     background-color: transparent;
     padding: 1rem;
     font-size: 1rem;
@@ -230,6 +218,8 @@ footer nav ul li a{
     padding-bottom: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-top: 1em;
+    height: 90%;
 }
 
 #mapaContacto{
@@ -238,7 +228,9 @@ footer nav ul li a{
     border-color: white;
     padding-bottom: 1rem;
     padding-left: 2rem;
-    margin-right: 2rem;
+    padding-right: 2rem;
+    padding-top: 1em;
+    height: 90%;
 }
 
 #tituloContacto{
@@ -293,12 +285,13 @@ footer nav ul li a{
 /*cotizaciones*/
 
 #mainCotizaciones{
-    grid-template-areas: "titulo titulo titulo titulo"
-                         "cotizaciones cotizaciones archivo archivo"
-                         "cotizaciones cotizaciones archivo archivo";
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-bottom: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "titulo titulo"
+                         "cotizaciones archivo"
+                         "cotizaciones archivo";
+    padding-left: 2em;
+    padding-right: 2em;
+    margin: 25px;
     gap: 15px;
 }
 
@@ -315,19 +308,23 @@ footer nav ul li a{
     border-color: white;
     padding-left: 2rem;
     padding-bottom: 2rem;
+    height: 90%;
 }
 #formularioCotizaciones form{
     justify-content: space-between;
 }
 
 #archivo3d{
+    display: flex;
     grid-area: archivo;
     font-size: 1.2rem;
     border: solid;
     border-width: 2px;
     border-color: white;
+    padding-top: 1rem;
     padding-left: 2rem;
     padding-bottom: 2rem;
+    height: 90%;
 }
 
 /*producto unico (elemento)*/
@@ -390,7 +387,7 @@ footer nav ul li a{
         display: inline-flex;
         justify-content: center;
         padding: 0.1rem;
-        margin: 0.1rem;
+        margin:0;
         font-weight: 800;
         font-size: 0.6rem;
     }
@@ -407,19 +404,34 @@ footer nav ul li a{
 
     /*main index responsive*/
     main{  
-        text-align: center;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 0.5fr 1fr;
+        grid-template-rows: 1fr 0.5fr 0.8fr;
         grid-template-areas: "logo"
                              "gif"
                              "carrusel" ;
         gap: 5px;
+        margin-right: 0;
+        margin-left: 1em;
   }
 
+  #logo{
+      margin: 0;
+      padding: 0;
+      width: 80%;
+      align-self: center;
+  }
 
+  #mainLogo{
+      margin: 0;
+      padding: 0;
+      align-self: center;
+      justify-content: center;
+  }
 
   .carrusel{
-      width: 60€;
+      width: 80%;
+      padding: 0;
+      margin: 0;
   }
 
   #title{
@@ -428,14 +440,15 @@ footer nav ul li a{
 
   /*Cotizaciones responsive*/
   #mainCotizaciones{
-    grid-template-rows: 0.5fr 4fr 4fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 2fr;
     grid-template-areas: "titulo"
                          "cotizaciones"
                          "archivo";
-    padding-left: 2rem;
-    padding-right: 2rem;
     text-align: justify;
-    gap: 10px;
+    gap: 5px;
+    margin-left: 2em;
+    padding: 0;
 }
 
 #mainCotizaciones .submit{
@@ -443,15 +456,27 @@ footer nav ul li a{
 }
 
 #formularioCotizaciones{
-    padding: 1rem;
+    padding: 1em;
 }
 #archivo3d{
-    padding: 1rem;
+    padding: 1em;
+    display: block;
 }
 
 /*productos responsive*/
 
-
+#mainProductos{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 4fr 4fr;
+    grid-template-areas: "titulo"
+                         "productos"
+                         "insumos"
+                         "ofertas";
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 
 #listaProductos{
     flex-direction: column;
@@ -501,16 +526,34 @@ footer nav ul li a{
                          "imagen"
                          "descripcion"
                          "chart";
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0;
+    margin-left: 1em;
     text-align: justify;
 }
 
 #imgElemento{
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    width: 80%;
+
+    padding-left: 1em;
+    width: 95%;
 }
+
+/*sobre nosotros responsive*/
+
+#mainSobreNosotros{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.3fr 2fr;
+    grid-template-areas: "titulo"
+                         "subtitulo"
+                         "articulo";                    
+    padding: 1em;
+    margin: 0;
+    margin-left: 1em;
+    text-align: justify;
+}
+
+#sobreNosotrosTitulo{
+    text-align: left;
+}
+
 
 }
