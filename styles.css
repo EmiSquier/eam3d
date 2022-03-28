@@ -7,7 +7,7 @@ body{
     color: white;
 }
 /*navbar y header*/
-header {   
+header {
     display: inline-flex;
     justify-content: center;
     text-align: center;
@@ -29,6 +29,11 @@ header nav ul li {
     margin: 0.2rem;
     font-weight: 600;
     font-size: 0.8rem;
+}
+
+header nav ul li:hover{
+    transform: scale(1.2);
+    background-color: teal;
 }
 
 header nav ul li a {
@@ -114,6 +119,12 @@ footer nav ul li{
     margin: 0.2rem;
     text-transform: uppercase;
 }
+
+footer nav ul li:hover{
+    transform: scale(1.1);
+    background-color: teal;
+}
+
 footer nav ul li a{
     text-decoration: none;
     list-style: none;
