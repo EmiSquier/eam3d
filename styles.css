@@ -429,7 +429,7 @@ footer nav ul li a{
     grid-template-areas: "titulo"
                          "contacto"
                          "mapa";
-    padding: 0;
+    padding: 1em;
     margin: 0;
     justify-content: center;
 }
@@ -462,7 +462,7 @@ footer nav ul li a{
                          "articulo";                    
     padding: 1em;
     margin: 0;
-    margin-left: 1em;
+    margin-left: 0;
     text-align: justify;
 }
 
