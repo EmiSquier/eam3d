@@ -1,47 +1,20 @@
 body{
-    background: rgb(34,193,195);
-    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(0,80,80,1) 100%);
+    background: rgb(218, 218, 218);
     font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    color: white;
 }
 /*navbar y header*/
-header {
-    display: inline-flex;
-    justify-content: center;
-    text-align: center;
-    grid-area: header;
-}
 
-header nav{  
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    text-align: left;
-}
 
-header nav ul li {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding: 0.2rem;
-    margin: 0.2rem;
-    font-weight: 600;
-    font-size: 0.8rem;
-}
-
-header nav ul li:hover{
-    transform: scale(1.2);
-    background-color: teal;
-}
-
-header nav ul li a {
+.navbar-nav {
     text-decoration: none;
     text-transform: uppercase;
     list-style: none;
-    color: white;
+    font-weight: 700;
 }
+
+
 
 /*main del index*/
 
@@ -53,7 +26,7 @@ header nav ul li a {
 }
 
 #printerGif{
-    width: 60%;
+    width: 80%;
     height: auto;
 }
 
@@ -67,12 +40,12 @@ main{
                          "logo logo gif gif"
                          "logo logo carrusel carrusel" ;
     align-items: center;
+    background-color: rgb(198, 198, 198);
 }
 
 #title{
     grid-area: title;
     text-align: center;
-    color: white;
 }
 
 #logo{
@@ -84,8 +57,10 @@ main{
     grid-area: gif;
 }
 
-#carrusel{
+#carouselExampleCaptions{
     grid-area: carrusel;
+    width: 80%;
+
 }
 
 .carrusel{
@@ -120,15 +95,14 @@ footer nav ul li{
     text-transform: uppercase;
 }
 
-footer nav ul li:hover{
-    transform: scale(1.1);
-    background-color: teal;
+footer nav ul li a:hover{
+    font-weight: 700;
 }
 
 footer nav ul li a{
     text-decoration: none;
     list-style: none;
-    color: white;
+    color: black;
 }
 
 /*inicio distintas páginas*/
@@ -164,7 +138,9 @@ footer nav ul li a{
     border: solid;
     border-width: 2px;
     border-color: white;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
+    padding: 1em;
+
 }
 
 #ofertas{
@@ -180,7 +156,8 @@ footer nav ul li a{
     border: solid;
     border-width: 2px;
     border-color: white;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
+    padding: 1em;
 }
 
 #insumos{
@@ -195,7 +172,8 @@ footer nav ul li a{
     border: solid;
     border-width: 2px;
     border-color: white;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
+    padding: 1em;
 }
 
 
@@ -214,35 +192,13 @@ footer nav ul li a{
     margin-top: 1rem;
     margin-bottom: 1rem;
     gap: 25px;
+    align-items: flex-start;
 }
 
 #formaContacto{
     grid-area: contacto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border: solid;
-    border-width: 2px;
-    border-color: white;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1em;
-    height: 90%;
 }
 
-#mapaContacto{
-    border: solid;
-    border-width: 2px;
-    border-color: white;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1em;
-    height: 90%;
-}
 
 #tituloContacto{
     grid-area: titulo;
@@ -250,6 +206,7 @@ footer nav ul li a{
 
 #mapaContacto{
     grid-area: mapa;
+
 }
 
 
@@ -296,14 +253,18 @@ footer nav ul li a{
 /*cotizaciones*/
 
 #mainCotizaciones{
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.05fr 1fr 1fr 0.05fr;
     grid-template-areas: "titulo titulo"
                          "cotizaciones archivo"
-                         "cotizaciones archivo";
+                         "cotizaciones archivo"
+                         "botonCot botonArc";
     padding-left: 2em;
     padding-right: 2em;
-    margin: 25px;
+    padding-bottom: 2em;
     gap: 15px;
+    align-items: start;
 }
 
 #tituloCotizaciones{
@@ -313,39 +274,33 @@ footer nav ul li a{
 
 #formularioCotizaciones{
     grid-area: cotizaciones;
-    font-size: 1.2rem;
-    border: solid;
-    border-width: 2px;
-    border-color: white;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
-    height: 90%;
-}
-#formularioCotizaciones form{
-    justify-content: space-between;
+    max-width: 80%;
 }
 
 #archivo3d{
-    display: flex;
     grid-area: archivo;
-    font-size: 1.2rem;
-    border: solid;
-    border-width: 2px;
-    border-color: white;
-    padding-top: 1rem;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
-    height: 90%;
+    max-width: 80%;
 }
+
+#buttonCotizaciones{
+    grid-area: botonCot;
+}
+
+#buttonArchivo{
+    grid-area: botonArc;
+}
+
 
 /*producto unico (elemento)*/
 
 #mainElemento{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr 1fr;
-    grid-template-areas: "titulo titulo"
-                         "imagen descripcion"
-                         "chart chart";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.05fr 1fr 0.1fr 1fr;
+    grid-template-areas: "titulo titulo titulo titulo"
+                         "imagen imagen imagen imagen"
+                         "similares similares similares similares"
+                         "oferta oferta oferta oferta";
+                        
     padding-left: 2rem;
     padding-right: 2rem;
     gap: 15px
@@ -358,35 +313,26 @@ footer nav ul li a{
 
 }
 
-#imgElemento{
-    display: flex;
-    justify-content: center;
+#mainElemento .card{
     grid-area: imagen;
-    align-items: center;
-    padding-left: 5rem;
-    width: 80%;
-}
-
-#descripcionElemento{
-    grid-area: descripcion;
-}
-#descripcionElemento h2{
-    font-size: 2rem;
-}
-
-#descripcionElemento p{
-    font-size: 1.2rem;
 }
 
 
-#chartElemento{
-    grid-area: chart;
-    font-size: 1.2rem;
-    padding-left: 5rem;
+#similares{
+    grid-area: similares;
+}
+
+#listaOfertasElemento{
+    grid-area: oferta;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 991px){
 
     /*nav y footer comunes, responsive*/
     header{
@@ -421,22 +367,10 @@ footer nav ul li a{
                              "gif"
                              "carrusel" ;
         gap: 5px;
-        margin-right: 0;
-        margin-left: 1em;
-  }
-
-  #logo{
-      margin: 0;
-      padding: 0;
-      width: 80%;
-      align-self: center;
-  }
-
-  #mainLogo{
-      margin: 0;
-      padding: 0;
-      align-self: center;
-      justify-content: center;
+        margin:0;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
   }
 
   .carrusel{
@@ -452,26 +386,23 @@ footer nav ul li a{
   /*Cotizaciones responsive*/
   #mainCotizaciones{
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1fr 2fr;
+    grid-template-rows: 0.2fr 0.8fr 0.2fr 1fr 0.2fr ;
     grid-template-areas: "titulo"
                          "cotizaciones"
-                         "archivo";
-    text-align: justify;
+                         "botonCot"
+                         "archivo"
+                         "botonArc";
     gap: 5px;
-    margin-left: 2em;
-    padding: 0;
-}
-
-#mainCotizaciones .submit{
-    width: 100%;
+    padding: 15px;
+    max-width: 100%;
 }
 
 #formularioCotizaciones{
-    padding: 1em;
+    max-width: 100%;
 }
+
 #archivo3d{
-    padding: 1em;
-    display: block;
+    max-width: 100%;
 }
 
 /*productos responsive*/
@@ -484,26 +415,10 @@ footer nav ul li a{
                          "insumos"
                          "ofertas";
     text-align: center;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
     width: 100%;
-}
-
-#listaProductos{
-    flex-direction: column;
-    padding: 0;
-}
-
-
-#listaOfertas{
-    flex-direction: column;
-    padding: 0;
-}
-
-
-#listaInsumos{
-    flex-direction: column;
-    padding: 0;
 }
 
 /*contacto responsive*/
@@ -515,38 +430,27 @@ footer nav ul li a{
                          "contacto"
                          "mapa";
     padding: 0;
+    margin: 0;
+    justify-content: center;
 }
 
-#formaContacto{
-    margin-left: 2rem;
-    margin-right: 2rem;
-    padding: 1rem;
-}
-
-#mapaContacto{
-    margin-left: 2rem;
-    margin-right: 2rem;
-    padding: 1rem;
-}
  /*elemento responsive*/
 
-#mainElemento{
+ #mainElemento{
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1fr 1fr 1fr;
+    grid-template-rows: 0.05fr 0.4fr 0.1fr 0.5fr;
     grid-template-areas: "titulo"
                          "imagen"
-                         "descripcion"
-                         "chart";
-    padding: 0;
-    margin-left: 1em;
-    text-align: justify;
+                         "similares"
+                         "oferta";
+    padding: 15px;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+
 }
 
-#imgElemento{
 
-    padding-left: 1em;
-    width: 95%;
-}
 
 /*sobre nosotros responsive*/
 

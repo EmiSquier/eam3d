@@ -4,20 +4,44 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="styles.css" rel="stylesheet" type="text/css">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 	<title>Cotizaciones</title>
 </head>
 <body>
 	<header>
 
-		<nav>
-			  <ul>
-				<li><a href="index.html">Inicio</a></li>
-				<li><a href="cotizaciones.html">Cotizaciones</a></li>
-				<li><a href="productos.html">Productos</a></li>
-				<li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
-				<li><a href="contacto.html">Contacto</a></li>
-			  </ul>
-		</nav>
+		<nav class="navbar navbar-expand-lg navbar-light bg-none w-auto p-3" style="background-color: transparent" >
+			<div class="container-fluid">
+			  <a class="navbar-brand" href="index.html">EAM3D</a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+				  <li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="cotizaciones.html">Cotizaciones</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="productos.html">Productos</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="sobre_nosotros.html">Sobre Nosotros</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="contacto.html">Contacto</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
 	</header>
 	
 <main id="mainCotizaciones">
@@ -28,20 +52,35 @@
 	<div id="formularioCotizaciones">
 	<h2>Por cotizaciones, rellena el formulario aquí abajo:</h2>
 	<form action="#">
+		<div class="list-group">
+			<label class="list-group-item">
+			  <input class="form-check-input me-1" type="checkbox" value="">
+			  Impresiones
+			</label>
+			<label class="list-group-item">
+			  <input class="form-check-input me-1" type="checkbox" value="">
+			Diseño mecánico
+			</label>
+			<label class="list-group-item">
+			  <input class="form-check-input me-1" type="checkbox" value="">
+			 Diseño orgánico
+			</label>
+			<label class="list-group-item">
+			  <input class="form-check-input me-1" type="checkbox" value="">
+			 Figuras
+			</label>
+		  </div>
+		  <div class="mb-3">
+			<label for="exampleFormControlInput1" class="form-label">Dirección de email</label>
+			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@mail.com">
+		  </div>
 
- 		<label for="impresiones"><input type="checkbox" id="impresiones">Impresiones</label>
- 		<br>
-		<label for="mecanico"><input type="checkbox" id="mecanico">Diseño mecánico</label>
-		<br>
-		<label for="organico"><input type="checkbox" id="organico">Diseño orgánico, figuras</label>
-		<br>
-		<br>
-		<label for="email">Email: </label>
-		<input type="email" id="email" placeholder="Ingresa tu Email" required>
-		<br>
-		<br>
-		<input class="submit" type="submit" name="submit">
+
 	</form>
+
+	</div>
+	<div class="d-grid gap-2"  id="buttonCotizaciones">
+		<button class="btn btn-primary" type="button">Enviar</button>
 	</div>
 
 
@@ -49,41 +88,80 @@
 	<h2>En caso de tener un archivo 3d disponible, envielo a continuación:</h2>
 
 	<form action="#">
-		<br>
-		<input type="file">
-		<br>
+		
+		<div class="mb-3">
+			<input class="form-control" type="file" id="formFile">
+		  </div>
+	
 		<h3>Si lo conoce, especifique el tipo de archivo:</h3>
-		<br>
-		<label for="stl"><input type="radio" id="stl" name="radio">Stl</label>
-		<br>
-		<label for="obj"><input type="radio" id="obj" name="radio">Obj</label>
-		<br>
-		<label for="x3d"><input type="radio" id="x3d" name="radio">X3D</label>
-		<br>
-		<label for="3mf"><input type="radio" id="3mf" name="radio">3MF</label>
-		<br>
-		<br>
-		<label for="email">Email: </label>
-		<input type="email" id="email" placeholder="Ingresa tu Email" required>
-		<br>
-		<br>
-		<input type="submit" name="submit" class="submit">
+		<div class="list-group-item">
+			<input class="form-check-input" type="radio" name="archivo" id="stl">
+			<label class="form-check-label" for="stl">
+			  STL
+			</label>
+		  </div>
+		  <div class="list-group-item">
+			<input class="form-check-input" type="radio" name="archivo" id="obj">
+			<label class="form-check-label" for="obj">
+			  OBJ
+			</label>
+		  </div>
+		  <div class="list-group-item">
+			<input class="form-check-input" type="radio" name="archivo" id="x3d">
+			<label class="form-check-label" for="x3d">
+			 X3D
+			</label>
+		  </div>
+		  <div class="list-group-item">
+			<input class="form-check-input" type="radio" name="archivo" id="3mf">
+			<label class="form-check-label" for="3mf">
+			  3MF
+			</label>
+		  </div>
+
+	
+
+		<div class="mb-3">
+			<label for="exampleFormControlInput1" class="form-label">Dirección de email</label>
+			<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@mail.com">
+		  </div>
 	</form>
+
+	</div>
+	<div class="d-grid gap-2"  id="buttonArchivo" >
+		<button class="btn btn-primary" type="button">Enviar</button>
 	</div>
 </main>
 
-	<footer>
-	<nav>
-  		<ul>
-    		<li><a href="https://facebook.com" target= "_blank">Facebook</a></li>
-    		<li><a href="https://instagram.com" target= "_blank">Instagram</a></li>
-    		<li><a href="https://mercadolibre.com" target= "_blank">Mercadolibre</a></li>
-  		</ul>
-	</nav>
+<footer>
+	<nav class="navbar navbar-expand-lg navbar-light bg-none w-auto p-3" style="background-color: transparent" >
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdownFooter" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNavDropdownFooter">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<a class="nav-link" href="https://www.facebook.com/" target="_blank">FACEBOOK</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="https://www.instagram.com/" target="_blank">INSTAGRAM</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="https://www.mercadolibre.com.uy/" target="_blank">MERCADO LIBRE</a>
+			  </li>
+			  <li class="nav-item">
+
+			</ul>
+		  </div>
+		</div>
+	  </nav>
 
 	<div>
 		<p>Todos los derechos reservados, Emiliano Marchese 2022.</p>
 	</div>
 </footer>
+
 </body>
+
 </html>
