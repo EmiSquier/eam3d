@@ -23,6 +23,9 @@ body{
     height: auto;
     padding: 2rem;
     margin: 2rem;
+
+    animation: bounceInDown;
+    animation-duration: 1s;
 }
 
 #printerGif{
@@ -35,17 +38,28 @@ main{
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 0.5fr 2fr 3fr;
-    grid-template-areas: "title title . ."
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-areas: "title title title title"
                          "logo logo gif gif"
                          "logo logo carrusel carrusel" ;
     align-items: center;
     background-color: rgb(198, 198, 198);
+    max-height: 100vh;
+    gap: 0.5em;
 }
 
 #title{
     grid-area: title;
     text-align: center;
+
+    animation: fadeIn;
+    animation-duration: 1s;
+}
+
+
+
+#title:hover{
+    transform: ;
 }
 
 #logo{
@@ -55,13 +69,28 @@ main{
 
 #gif{
     grid-area: gif;
+    transform: rotate(0);
+    animation: backInRight;
+    animation-duration: 2s;
+}
+
+#gif:hover{
+    transform: rotate(-10deg);
+    transition: 3s;
 }
 
 #carouselExampleCaptions{
     grid-area: carrusel;
-    width: 80%;
-
+    width: 70%;
+    transition: all 2s;
+    animation: backInUp;
+    animation-duration: 2s;
 }
+
+#carouselExampleCaptions:hover{
+    transform: scale(1.2);
+}
+
 
 .carrusel{
     width: 80%;
@@ -124,7 +153,12 @@ footer nav ul li a{
     grid-area: titulo;
     display: flex;
     justify-content: center;
+
+    animation: fadeIn;
+    animation-duration: 1s;
 }
+
+
 
 #productos{
     grid-area: productos;
@@ -164,6 +198,7 @@ footer nav ul li a{
     grid-area: insumos;
     font-size: 1.3rem;
 }
+
 #listaInsumos{
     display: flex;
     flex-direction: row;
@@ -176,6 +211,10 @@ footer nav ul li a{
     padding: 1em;
 }
 
+.card:hover{
+    transform: scale(1.1);
+    background-color: rgb(103, 103, 255);
+}
 
 /*Contacto*/
 
@@ -202,6 +241,9 @@ footer nav ul li a{
 
 #tituloContacto{
     grid-area: titulo;
+
+    animation: fadeIn;
+    animation-duration: 1s;
 }
 
 #mapaContacto{
@@ -227,11 +269,17 @@ footer nav ul li a{
 #sobreNosotrosTitulo{
     grid-area: titulo;
     font-size: 2rem;
+
+    animation: fadeIn;
+    animation-duration: 1s;
 }
 
 #sobreNosotrosSubtitulo{
     grid-area: subtitulo;
     font-size: 1.2rem;
+
+    animation: fadeIn;
+    animation-duration: 3s;
 }
 
 #articulo{
@@ -243,6 +291,9 @@ footer nav ul li a{
     border-color: white;
     padding: 2rem;
     font-size: 1.1rem;
+
+    animation: fadeIn;
+    animation-duration: 1s;
 }
 
 #imgArticulo{
