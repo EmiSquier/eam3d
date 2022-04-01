@@ -56,12 +56,6 @@ main{
     animation-duration: 1s;
 }
 
-
-
-#title:hover{
-    transform: ;
-}
-
 #logo{
     grid-area: logo;
     width: 80%;
