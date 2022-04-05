@@ -44,7 +44,6 @@ main{
                          "logo logo carrusel carrusel" ;
     align-items: center;
     background-color: rgb(198, 198, 198);
-    max-height: 100vh;
     gap: 0.5em;
 }
 
