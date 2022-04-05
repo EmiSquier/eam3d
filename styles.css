@@ -47,6 +47,8 @@ main{
     gap: 0.5em;
 }
 
+/*testin cosas*/
+
 #title{
     grid-area: title;
     text-align: center;
