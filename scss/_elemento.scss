@@ -1,0 +1,50 @@
+#mainElemento{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.05fr 1fr 0.1fr 1fr;
+    grid-template-areas: "titulo titulo titulo titulo"
+                         "imagen imagen imagen imagen"
+                         "similares similares similares similares"
+                         "oferta oferta oferta oferta";
+                        
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 15px;
+    @media (max-width: 991px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.05fr 0.4fr 0.1fr 0.5fr;
+        grid-template-areas: "titulo"
+                             "imagen"
+                             "similares"
+                             "oferta";
+        padding: 15px;
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+    
+    }
+}
+
+#tituloElemento{
+    grid-area: titulo;
+    font-size: 2rem;
+    padding-left: 2rem;
+
+}
+
+#mainElemento .card{
+    grid-area: imagen;
+}
+
+
+#similares{
+    grid-area: similares;
+}
+
+#listaOfertasElemento{
+    grid-area: oferta;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}

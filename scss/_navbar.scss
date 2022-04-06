@@ -1,0 +1,22 @@
+.navbar-nav {
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+    font-weight: 700;
+}
+
+@media (max-width: 991px) {
+header{
+    border: none;
+    width: auto;
+    nav ul li {
+        display: inline-flex;
+        justify-content: center;
+        padding: 0.1rem;
+        margin:0;
+        font-weight: 800;
+        font-size: 0.6rem;
+    }
+}
+
+}

@@ -1,0 +1,104 @@
+.body{
+    background-color: $fourthColor;
+    font-size: 15px;
+    font-family: $fontMain;
+    margin: 0;
+}
+
+
+
+#mainLogo{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    margin: 2rem;
+
+    animation: bounceInDown;
+    animation-duration: 1s;
+}
+
+#printerGif{
+    width: 80%;
+    height: auto;
+}
+
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-areas: "title title title title"
+                         "logo logo gif gif"
+                         "logo logo carrusel carrusel" ;
+    align-items: center;
+    background-color: $mainColor;
+    gap: 0.5em;
+
+    @media (max-width: 991px){  
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 0.5fr 0.8fr;
+            grid-template-areas: "logo"
+                                 "gif"
+                                 "carrusel" ;
+            gap: 5px;
+            margin:0;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+      }
+    
+}
+
+#title{
+    grid-area: title;
+    text-align: center;
+
+    animation: fadeIn;
+    animation-duration: 1s;
+    @media (max-width: 991px){
+        display: none;
+    }
+}
+
+#logo{
+    grid-area: logo;
+    width: 80%;
+}
+
+#gif{
+    grid-area: gif;
+    transform: rotate(0);
+    animation: backInRight;
+    animation-duration: 2s;
+}
+
+#gif:hover{
+    transform: rotate(-10deg);
+    transition: 3s;
+}
+
+#carouselExampleCaptions{
+    grid-area: carrusel;
+    width: 70%;
+    transition: all 2s;
+    animation: backInUp;
+    animation-duration: 2s;
+}
+
+#carouselExampleCaptions:hover{
+    transform: scale(1.2);
+}
+
+
+.carrusel{
+    width: 80%;
+    margin: 2rem;
+    display: inline-flex;
+    height: auto;
+    @media (max-width: 991px){
+          width: 80%;
+          padding: 0;
+          margin: 0;
+      }
+}
