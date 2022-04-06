@@ -1,0 +1,55 @@
+#mainCotizaciones{
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.05fr 1fr 1fr 0.05fr;
+    grid-template-areas: "titulo titulo"
+                         "cotizaciones archivo"
+                         "cotizaciones archivo"
+                         "botonCot botonArc";
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+    gap: 15px;
+    align-items: start;
+    @media (max-width: 991px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.8fr 0.2fr 1fr 0.2fr ;
+        grid-template-areas: "titulo"
+                             "cotizaciones"
+                             "botonCot"
+                             "archivo"
+                             "botonArc";
+        gap: 5px;
+        padding: 15px;
+        max-width: 100%;
+    }
+}
+
+#tituloCotizaciones{
+    grid-area: titulo;
+    padding: 5px;
+}
+
+#formularioCotizaciones{
+    grid-area: cotizaciones;
+    max-width: 80%;
+    @media (max-width: 991px){
+        max-width: 100%;
+    }
+}
+
+#archivo3d{
+    grid-area: archivo;
+    max-width: 80%;
+    @media (max-width: 991px) {
+        max-width: 100%;
+    }
+}
+
+#buttonCotizaciones{
+    grid-area: botonCot;
+}
+
+#buttonArchivo{
+    grid-area: botonArc;
+}

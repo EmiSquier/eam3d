@@ -1,0 +1,59 @@
+#mainSobreNosotros{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-areas: "titulo"
+                         "subtitulo"
+                         "articulo";
+    padding-left: 2rem;
+    padding-right: 2rem;
+    @media (max-width: 991px) {
+        grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.3fr 2fr;
+    grid-template-areas: "titulo"
+                         "subtitulo"
+                         "articulo";                    
+    padding: 1em;
+    margin: 0;
+    margin-left: 0;
+    text-align: justify;
+}
+
+}
+
+#sobreNosotrosTitulo{
+    grid-area: titulo;
+    font-size: 2rem;
+
+    animation: fadeIn;
+    animation-duration: 1s;
+    @media (max-width: 991px){
+        text-align: left;
+    }
+}
+
+#sobreNosotrosSubtitulo{
+    grid-area: subtitulo;
+    font-size: 1.2rem;
+
+    animation: fadeIn;
+    animation-duration: 3s;
+}
+
+#articulo{
+    display: flex;
+    flex-direction: column;
+    grid-area: articulo;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    padding: 2rem;
+    font-size: 1.1rem;
+
+    animation: fadeIn;
+    animation-duration: 1s;
+}
+
+#imgArticulo{
+    width: 50%;
+    height: auto;
+}

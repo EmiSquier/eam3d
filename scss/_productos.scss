@@ -1,0 +1,91 @@
+#mainProductos{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0.5fr 2fr 2fr 2fr;
+    grid-template-areas: "titulo titulo titulo titulo titulo"
+                         "productos productos productos productos productos"
+                         "ofertas ofertas ofertas ofertas ofertas"
+                         "insumos insumos insumos insumos insumos";
+    padding-left: 2rem;
+    padding-right: 2rem;
+    @media (max-width: 991px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 4fr 4fr;
+        grid-template-areas: "titulo"
+                             "productos"
+                             "insumos"
+                             "ofertas";
+        text-align: center;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
+
+#tituloProductos{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+
+    animation: fadeIn;
+    animation-duration: 1s;
+}
+
+
+
+#productos{
+    grid-area: productos;
+    font-size: 1.3rem;
+}
+#listaProductos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    font-size: 1.0rem;
+    padding: 1em;
+
+}
+
+#ofertas{
+    grid-area: ofertas;
+    font-size: 1.3rem;
+
+}
+#listaOfertas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    font-size: 1.0rem;
+    padding: 1em;
+}
+
+#insumos{
+    grid-area: insumos;
+    font-size: 1.3rem;
+}
+
+#listaInsumos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    font-size: 1.0rem;
+    padding: 1em;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    background-color: rgb(103, 103, 255);
+}
