@@ -1,8 +1,9 @@
 .body{
-    background-color: $fourthColor;
+    background-color: map-get($map: $paleta, $key: secondaryColor);
     font-size: 15px;
     font-family: $fontMain;
     margin: 0;
+    color: map-get($map: $paleta, $key: textColor)
 }
 
 
@@ -32,7 +33,7 @@ main{
                          "logo logo gif gif"
                          "logo logo carrusel carrusel" ;
     align-items: center;
-    background-color: $mainColor;
+    background-color: map-get($map: $paleta, $key: mainColor);
     gap: 0.5em;
 
     @media (max-width: 991px){  
@@ -90,6 +91,9 @@ main{
     transform: scale(1.2);
 }
 
+.carousel-caption{
+    color: map-get($map: $paleta, $key: textColor)
+}
 
 .carrusel{
     width: 80%;

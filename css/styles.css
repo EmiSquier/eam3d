@@ -52,10 +52,11 @@ footer {
       grid-area: footer; } }
 
 .body {
-  background-color: #ADD8E5;
+  background-color: #C4EBF1;
   font-size: 15px;
   font-family: "Space Mono", monospace;
-  margin: 0; }
+  margin: 0;
+  color: #242424; }
 
 #mainLogo {
   width: 100%;
@@ -121,6 +122,9 @@ main {
 
 #carouselExampleCaptions:hover {
   transform: scale(1.2); }
+
+.carousel-caption {
+  color: #242424; }
 
 .carrusel {
   width: 80%;
@@ -317,7 +321,7 @@ main {
 
 #mainSobreNosotros {
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 3fr;
+  grid-template-rows: 0.4fr 0.4fr 3fr;
   grid-template-areas: "titulo" "subtitulo" "articulo";
   padding-left: 2rem;
   padding-right: 2rem; }
