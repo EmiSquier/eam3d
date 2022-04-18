@@ -106,3 +106,7 @@ main{
           margin: 0;
       }
 }
+
+.carrusel{
+    @include imagen(100%, 100%, black)
+}

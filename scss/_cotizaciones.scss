@@ -53,3 +53,11 @@
 #buttonArchivo{
     grid-area: botonArc;
 }
+
+.button{
+    @extend %button;
+    border-radius: 5px;
+    .button:hover{
+        transform: scale(1.1);
+    }
+}

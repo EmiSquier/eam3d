@@ -10,3 +10,16 @@ $paleta: (
     'textColor': rgb(36, 36, 36)
 );
 
+%button {
+    border: solid;
+    border-color: map-get($map: $paleta, $key: textColor);
+    background-color: map-get($map: $paleta, $key: fourthColor);
+}
+
+@mixin imagen($ancho, $alto, $color){
+    width: $ancho;
+    height: $alto;
+    border: solid;
+    border-color: $color;
+    border-radius: 5px;
+}

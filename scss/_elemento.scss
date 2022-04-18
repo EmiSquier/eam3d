@@ -48,3 +48,11 @@
     flex-wrap: wrap;
 
 }
+
+.buttonCompra{
+    @extend %button;
+    border-radius: 5px;
+    .buttonCompra:hover{
+        transform: scale(1.1);
+    }
+}

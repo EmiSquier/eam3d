@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+.button, .buttonCompra {
+  border: solid;
+  border-color: #242424;
+  background-color: #ADD8E5; }
+
 .navbar-nav {
   text-decoration: none;
   text-transform: uppercase;
@@ -137,6 +142,13 @@ main {
       padding: 0;
       margin: 0; } }
 
+.carrusel {
+  width: 100%;
+  height: 100%;
+  border: solid;
+  border-color: black;
+  border-radius: 5px; }
+
 #mainCotizaciones {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.05fr 1fr 1fr 0.05fr;
@@ -178,6 +190,11 @@ main {
 
 #buttonArchivo {
   grid-area: botonArc; }
+
+.button {
+  border-radius: 5px; }
+  .button .button:hover {
+    transform: scale(1.1); }
 
 #mainProductos {
   display: grid;
@@ -249,9 +266,9 @@ main {
   font-size: 1.0rem;
   padding: 1em; }
 
-.card:hover {
-  transform: scale(1.1);
-  background-color: #6767ff; }
+.cardElemento:hover {
+  transform: scale(1.03);
+  background-color: #9e9eff; }
 
 #mainElemento {
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -287,6 +304,11 @@ main {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap; }
+
+.buttonCompra {
+  border-radius: 5px; }
+  .buttonCompra .buttonCompra:hover {
+    transform: scale(1.1); }
 
 #mainContacto {
   display: grid;
