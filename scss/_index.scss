@@ -81,8 +81,8 @@ main{
 }
 
 #gif:hover{
-    transform: rotate(-10deg);
-    transition: 3s;
+    transform: scale(1.05);
+    transition: 2s;
 }
 
 #carouselExampleCaptions{
@@ -100,7 +100,8 @@ main{
 }
 
 #carouselExampleCaptions:hover{
-    transform: scale(1.2);
+    transform: scale(1.05);
+    transition: 2s;
 }
 
 .carousel-caption{
