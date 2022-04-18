@@ -56,3 +56,16 @@
         transform: scale(1.1);
     }
 }
+
+.buttonElemento{
+    @extend %button;
+    border-radius: 5px;
+    .buttonElemento:hover{
+        transform: scale(1.1);
+    }
+}
+
+.mainCard{
+    background-color: map-get($map: $paleta, $key: sixColor);
+    padding-right: 2em;
+}

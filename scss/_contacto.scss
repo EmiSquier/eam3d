@@ -1,7 +1,7 @@
 #mainContacto{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 4fr 4fr;
+    grid-template-rows: 1fr 2fr 2fr;
     grid-template-areas: "titulo titulo"
                          "contacto mapa"
                          "contacto mapa";
@@ -31,6 +31,7 @@
 
 #tituloContacto{
     grid-area: titulo;
+    padding-top: 1em;
 
     animation: fadeIn;
     animation-duration: 1s;
@@ -38,5 +39,24 @@
 
 #mapaContacto{
     grid-area: mapa;
+
+}
+
+.mapResponsive{
+
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+
+}
+
+.mapResponsive iframe{
+
+    left:0;
+    top:0;
+    height:95%;
+    width:95%;
+    position:absolute;
 
 }

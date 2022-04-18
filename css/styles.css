@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
-.button, .buttonCompra {
+.buttonElemento, .buttonCompra {
   border: solid;
   border-color: #242424;
-  background-color: #ADD8E5; }
+  background-color: #ADD8E5;
+  text-align: center; }
 
 .navbar-nav {
   text-decoration: none;
@@ -57,7 +58,7 @@ footer {
       grid-area: footer; } }
 
 .body {
-  background-color: #C4EBF1;
+  background-color: #FFD375;
   font-size: 15px;
   font-family: "Space Mono", monospace;
   margin: 0;
@@ -82,7 +83,7 @@ main {
   grid-template-rows: 0.2fr 1fr 1fr;
   grid-template-areas: "title title title title" "logo logo gif gif" "logo logo carrusel carrusel";
   align-items: center;
-  background-color: #FFFFC2;
+  background-color: #B3BEC3;
   gap: 0.5em; }
   @media (max-width: 991px) {
     main {
@@ -91,8 +92,6 @@ main {
       grid-template-areas: "logo" "gif" "carrusel";
       gap: 5px;
       margin: 0;
-      justify-content: center;
-      align-items: center;
       padding: 15px; } }
 
 #title {
@@ -107,12 +106,19 @@ main {
 #logo {
   grid-area: logo;
   width: 80%; }
+  @media (max-width: 991px) {
+    #logo {
+      text-align: center; } }
 
 #gif {
   grid-area: gif;
   transform: rotate(0);
   animation: backInRight;
   animation-duration: 2s; }
+  @media (max-width: 991px) {
+    #gif {
+      text-align: center;
+      width: 100%; } }
 
 #gif:hover {
   transform: rotate(-10deg);
@@ -120,10 +126,16 @@ main {
 
 #carouselExampleCaptions {
   grid-area: carrusel;
-  width: 70%;
+  width: 80%;
   transition: all 2s;
   animation: backInUp;
   animation-duration: 2s; }
+  @media (max-width: 991px) {
+    #carouselExampleCaptions {
+      margin-right: 0;
+      text-align: center;
+      width: 100%;
+      margin-top: 30px; } }
 
 #carouselExampleCaptions:hover {
   transform: scale(1.2); }
@@ -136,18 +148,12 @@ main {
   margin: 2rem;
   display: inline-flex;
   height: auto; }
-  @media (max-width: 991px) {
-    .carrusel {
-      width: 80%;
-      padding: 0;
-      margin: 0; } }
 
-.carrusel {
-  width: 100%;
-  height: 100%;
-  border: solid;
-  border-color: black;
-  border-radius: 5px; }
+@media (max-width: 991px) {
+  #mainCarrusel {
+    margin: 0;
+    padding: 0;
+    width: 100%; } }
 
 #mainCotizaciones {
   grid-template-columns: 1fr 1fr;
@@ -165,11 +171,14 @@ main {
       grid-template-areas: "titulo" "cotizaciones" "botonCot" "archivo" "botonArc";
       gap: 5px;
       padding: 15px;
+      padding-top: 5px;
       max-width: 100%; } }
 
 #tituloCotizaciones {
   grid-area: titulo;
-  padding: 5px; }
+  padding: 5px;
+  animation: fadeIn;
+  animation-duration: 1s; }
 
 #formularioCotizaciones {
   grid-area: cotizaciones;
@@ -191,10 +200,8 @@ main {
 #buttonArchivo {
   grid-area: botonArc; }
 
-.button {
-  border-radius: 5px; }
-  .button .button:hover {
-    transform: scale(1.1); }
+.buttonElemento .buttonElemento:hover {
+  transform: scale(1.01); }
 
 #mainProductos {
   display: grid;
@@ -266,9 +273,14 @@ main {
   font-size: 1.0rem;
   padding: 1em; }
 
+@media (max-width: 991px) {
+  .cardElemento {
+    margin-top: 20px;
+    width: 100%; } }
+
 .cardElemento:hover {
   transform: scale(1.03);
-  background-color: #9e9eff; }
+  background-color: #d0d1d2; }
 
 #mainElemento {
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -310,10 +322,19 @@ main {
   .buttonCompra .buttonCompra:hover {
     transform: scale(1.1); }
 
+.buttonElemento {
+  border-radius: 5px; }
+  .buttonElemento .buttonElemento:hover {
+    transform: scale(1.1); }
+
+.mainCard {
+  background-color: #dedede;
+  padding-right: 2em; }
+
 #mainContacto {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 4fr 4fr;
+  grid-template-rows: 1fr 2fr 2fr;
   grid-template-areas: "titulo titulo" "contacto mapa" "contacto mapa";
   padding-left: 2rem;
   padding-left: 2rem;
@@ -335,11 +356,25 @@ main {
 
 #tituloContacto {
   grid-area: titulo;
+  padding-top: 1em;
   animation: fadeIn;
   animation-duration: 1s; }
 
 #mapaContacto {
   grid-area: mapa; }
+
+.mapResponsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+
+.mapResponsive iframe {
+  left: 0;
+  top: 0;
+  height: 95%;
+  width: 95%;
+  position: absolute; }
 
 #mainSobreNosotros {
   grid-template-columns: 1fr;

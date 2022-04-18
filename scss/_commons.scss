@@ -1,12 +1,12 @@
 
 
 $paleta: (
-    'mainColor': #FFFFC2,
-    'secondaryColor': #C4EBF1,
+    'mainColor': #B3BEC3,
+    'secondaryColor': #FFD375,
     'thirdColor': #FFF684,
     'fourthColor': #ADD8E5,
-    'fifthColor': #FFD301,
-    'sixColor': #89C7E7,
+    'fifthColor': #d0d1d2,
+    'sixColor': #dedede,
     'textColor': rgb(36, 36, 36)
 );
 
@@ -14,12 +14,5 @@ $paleta: (
     border: solid;
     border-color: map-get($map: $paleta, $key: textColor);
     background-color: map-get($map: $paleta, $key: fourthColor);
-}
-
-@mixin imagen($ancho, $alto, $color){
-    width: $ancho;
-    height: $alto;
-    border: solid;
-    border-color: $color;
-    border-radius: 5px;
+    text-align: center;
 }

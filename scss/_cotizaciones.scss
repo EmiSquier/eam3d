@@ -21,6 +21,7 @@
                              "botonArc";
         gap: 5px;
         padding: 15px;
+        padding-top: 5px;
         max-width: 100%;
     }
 }
@@ -28,6 +29,9 @@
 #tituloCotizaciones{
     grid-area: titulo;
     padding: 5px;
+
+    animation: fadeIn;
+    animation-duration: 1s;
 }
 
 #formularioCotizaciones{
@@ -54,10 +58,9 @@
     grid-area: botonArc;
 }
 
-.button{
+.buttonElemento{
     @extend %button;
-    border-radius: 5px;
-    .button:hover{
-        transform: scale(1.1);
+    .buttonElemento:hover{
+        transform: scale(1.01);
     }
 }

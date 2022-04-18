@@ -85,7 +85,18 @@
     padding: 1em;
 }
 
+.cardElemento{
+    @media (max-width: 991px){
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
 .cardElemento:hover{
     transform: scale(1.03);
-    background-color: rgb(158, 158, 255);
+    background-color: map-get($map: $paleta, $key: fifthColor);
+}
+
+.buttonElemento{
+    @extend %button; 
 }
