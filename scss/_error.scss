@@ -1,0 +1,32 @@
+#mainError{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr, 2fr;
+    grid-template-areas: "titulo titulo" "subtitulo imagen";
+
+    @media (max-width: 991px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr, 2fr, 4fr;
+        grid-template-areas: "titulo" "subtitulo" "imagen";
+    }
+}
+
+#titleError{
+    grid-area: titulo;
+    text-align: center;
+}
+
+#subtitleError{
+    grid-area: subtitulo;
+    text-align: left;
+    padding-left: 4em;
+}
+
+#imgError{
+    width: 85%;
+}
+
+.imgError{
+    grid-area: imagen;
+    display: flex;
+    justify-content: center;
+}
