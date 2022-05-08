@@ -98,5 +98,10 @@
 }
 
 .buttonElemento{
+    display: flex;
     @extend %button; 
+}
+
+.cardBody{
+    align-content: end;
 }

@@ -283,6 +283,12 @@ main {
   transform: scale(1.03);
   background-color: #d0d1d2; }
 
+.buttonElemento {
+  display: flex; }
+
+.cardBody {
+  align-content: end; }
+
 #mainElemento {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.05fr 1fr 0.1fr 1fr;
