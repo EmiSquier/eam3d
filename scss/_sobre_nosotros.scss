@@ -1,17 +1,21 @@
 #mainSobreNosotros{
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 0.4fr 3fr;
-    grid-template-areas: "titulo"
-                         "subtitulo"
-                         "articulo";
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 0.4fr 0.4fr 3fr 3fr;
+    grid-template-areas: "titulo titulo"
+                         "subtitulo subtitulo"
+                         "articulo imagen"
+                         "imagen1 articulo1";
     padding-left: 2rem;
     padding-right: 2rem;
     @media (max-width: 991px) {
         grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 0.3fr 2fr;
+    grid-template-rows: 0.12fr 0.1fr 0.5fr 2fr 0.5fr 2fr;
     grid-template-areas: "titulo"
                          "subtitulo"
-                         "articulo";                    
+                         "imagen"
+                         "articulo"
+                         "imagen1"
+                         "articulo1";                    
     padding: 1em;
     margin: 0;
     margin-left: 0;
@@ -53,7 +57,28 @@
     animation-duration: 1s;
 }
 
+#articulo1{
+    grid-area: articulo1;
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    padding: 2rem;
+    font-size: 1.1rem;
+
+    animation: fadeIn;
+    animation-duration: 1s;
+}
+
 #imgArticulo{
-    width: 50%;
-    height: auto;
+ grid-area: imagen;
+}
+
+#imgArticulo1{
+    grid-area: imagen1;
+}
+
+.imgArticulo{
+    width: 100%;
 }
